@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "b78b7167-a845-43d6-a1d6-9acb23c3f057",
+		"name": "MNECHANIC SHOP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40381624"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Create _customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Brad alakai\",\n  \"email\": \"bradalakai4@gmailcom\",\n  \"phone\": \"8084907301\",\n  \"password\": \"1Kekupaa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5001/customers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Cutomers",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5001/customers"
+					},
+					"response": []
+				},
+				{
+					"name": "get a customer",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5001/customers/2"
+					},
+					"response": []
+				},
+				{
+					"name": "update customers",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5001/customers/2"
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5001/customers/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mechanics",
+			"item": [
+				{
+					"name": "delete mechanic",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5001/mechanics/2"
+					},
+					"response": []
+				},
+				{
+					"name": "create mechanic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"tom dumber\",\n    \"email\":\"btomdumb4@gmail.com\",\n    \"phone\":\"8084907301\",\n    \"salary\": \"200.00\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5001/mechanics"
+					},
+					"response": []
+				},
+				{
+					"name": "get mechanics",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5001/mechanics"
+					},
+					"response": []
+				},
+				{
+					"name": "uopdate  mechanic",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"tom dumber\",\n    \"email\":\"btomdumb4@gmail.com\",\n    \"phone\":\"8089998789\",\n    \"salary\": \"200.00\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5001/mechanics/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service_tickets",
+			"item": [
+				{
+					"name": "create ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ticket_date\": \"2025-10-02\",\n  \"service_desc\": \"Describe the service needed\",\n  \"customer_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5001/tickets"
+					},
+					"response": []
+				},
+				{
+					"name": "add mechanic to ticket",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:5001/tickets/1/add-mechanic/1"
+					},
+					"response": []
+				},
+				{
+					"name": "emove-mechanic from ticket",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "PUT",
+						"header": [],
+						"url": "http://127.0.0.1:5001/tickets/1/remove-mechanic/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
